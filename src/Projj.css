@@ -1,0 +1,35 @@
+.first {
+    padding-top: 120px;
+    padding-left: 240px;
+    padding-right: 200px;
+}
+
+.second {
+    padding-top: 80px;
+    padding-left: 240px;
+    padding-right: 200px;
+    padding-bottom: 120px;
+}
+
+.classes.icon{
+    size: 50px;
+}
+
+.dis-content {
+    text-decoration: none;
+    color: black;
+}
+
+#name {
+    font-size: 20px;
+}
+
+#main {
+    background-color: cornflowerblue;
+}
+
+#title {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans';
+}
