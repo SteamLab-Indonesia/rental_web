@@ -102,10 +102,14 @@ class MyHeader extends React.Component {
     
       handleDrawerOpen = () => {
         this.setState({ open: true });
+        if (this.props.updateDrawerState)
+          this.props.updateDrawerState(true);
       };
     
       handleDrawerClose = () => {
         this.setState({ open: false });
+        if (this.props.updateDrawerState)
+          this.props.updateDrawerState(false);
       };
     
       render() {
@@ -162,7 +166,11 @@ class MyHeader extends React.Component {
                       <ListItemIcon><GroupIcon /></ListItemIcon>
                       <ListItemText primary="Teacher" />
                   </ListItem> */}
-                  {[{text: 'Users',icon: <PersonIcon />,link: '/users'},{text: 'Teacher',icon: <GroupIcon />,link: '/teacher'},{text: 'Courses',icon: <AssignmentIcon />,link: '/courses'},{text: 'Attendence',icon: <BarChartIcon />,link: '/attendence'},
+                  {[
+                    {text: 'Vendor',icon: <PersonIcon />,link: '/addVendor'},
+                    {text: 'User',icon: <GroupIcon />,link: '/addUser'},
+                    {text: 'Product',icon: <AssignmentIcon />,link: '/addProduct'},
+                    {text: 'Attendence',icon: <BarChartIcon />,link: '/attendence'},
                   {text: 'Payment',icon: <AttachMoneyIcon />,link: '/payment'}].map((item, index) => (
                       <ListItem button key={item.text} component={ Link } to={item.link}>
                           <ListItemIcon>{item.icon}</ListItemIcon>
