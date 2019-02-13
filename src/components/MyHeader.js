@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../Projj.css';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -94,7 +93,7 @@ const styles = theme => ({
       typography: { useNextVariants: true },
     });
 
-class MyHeader extends React.Component {
+class MyHeader extends Component {
 
     state = {
         open: false,
@@ -193,10 +192,5 @@ class MyHeader extends React.Component {
         );
     }
 }
-
-// PersistentDrawerLeft.propTypes = {
-//     classes: PropTypes.object.isRequired,
-//     theme: PropTypes.object.isRequired,
-//   };
   
 export default withStyles(styles, { withTheme: true })(MyHeader);
