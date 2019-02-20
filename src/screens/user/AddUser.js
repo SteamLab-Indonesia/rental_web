@@ -32,7 +32,7 @@ const styles = theme => ({
       },    
   });
 
-  class AddVendor extends React.Component {
+  class AddUser extends React.Component {
 
     constructor()
     {
@@ -127,4 +127,4 @@ const styles = theme => ({
   }
   }
 
-  export default withStyles(styles)(AddVendor);
+  export default withStyles(styles)(AddUser);
