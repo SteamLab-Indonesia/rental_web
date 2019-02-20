@@ -36,13 +36,16 @@ const styles = theme => ({
     pos: {
         marginBottom: 12,
     },
+    main: {
+        marginLeft: '50px'        
+    }
 });
 
 class Dashboard extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div id="main" style={{textAlign: 'center'}}>
+            <div id="main" className={classes.main}>
                 <Button>
                     <Grid item component={Link} to="/abc" className="dis-content">
                         <Card className={classes.card}>
